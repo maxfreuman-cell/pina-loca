@@ -4,6 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>La Piña Loca</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍍</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 :root {
@@ -41,10 +42,18 @@ body::before{content:'';position:fixed;inset:0;
 /* ─── NAV ─── */
 nav{
   position:fixed;top:42px;left:0;right:0;z-index:999;
-  display:flex;justify-content:center;gap:4px;padding:7px 16px;
+  display:flex;justify-content:space-between;align-items:center;gap:4px;padding:7px 20px;
   background:rgba(5,12,5,0.88);backdrop-filter:blur(12px);
-  flex-wrap:wrap;border-bottom:1px solid rgba(26,122,46,.2)
+  border-bottom:1px solid rgba(26,122,46,.2)
 }
+.nav-logo{
+  font-family:'Bangers',cursive;font-size:1.4rem;
+  background:linear-gradient(90deg,var(--yellow),var(--orange));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  letter-spacing:2px;text-decoration:none;display:flex;align-items:center;
+  gap:6px;white-space:nowrap;flex-shrink:0
+}
+.nav-links{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end;align-items:center}
 nav a{
   font-family:'Fredoka One',cursive;font-size:.88rem;color:var(--cream);
   text-decoration:none;padding:5px 14px;border-radius:20px;
@@ -313,13 +322,16 @@ body.lang-es [data-es]{display:revert}
 
 <!-- ── NAV ── -->
 <nav>
-  <a href="#hero"><span data-en>Home</span><span data-es>Inicio</span></a>
-  <a href="#gallery"><span data-en>Gallery</span><span data-es>Galería</span></a>
-  <a href="#menu"><span data-en>Menu</span><span data-es>Menú</span></a>
-  <a href="#about"><span data-en>About Us</span><span data-es>Nosotros</span></a>
-  <a href="#locations"><span data-en>Locations</span><span data-es>Ubicaciones</span></a>
-  <a href="#hours"><span data-en>Hours</span><span data-es>Horario</span></a>
-  <a href="#contact"><span data-en>Contact</span><span data-es>Contacto</span></a>
+  <a href="#hero" class="nav-logo">🍍 La Piña Loca</a>
+  <div class="nav-links">
+    <a href="#hero"><span data-en>Home</span><span data-es>Inicio</span></a>
+    <a href="#gallery"><span data-en>Gallery</span><span data-es>Galería</span></a>
+    <a href="#menu"><span data-en>Menu</span><span data-es>Menú</span></a>
+    <a href="#about"><span data-en>About Us</span><span data-es>Nosotros</span></a>
+    <a href="#locations"><span data-en>Locations</span><span data-es>Ubicaciones</span></a>
+    <a href="#hours"><span data-en>Hours</span><span data-es>Horario</span></a>
+    <a href="#contact"><span data-en>Contact</span><span data-es>Contacto</span></a>
+  </div>
 </nav>
 
 <!-- ── HERO ── -->
